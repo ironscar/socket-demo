@@ -1,0 +1,12 @@
+<div>
+    <div>
+        <label for="socket-name">What is your name?</label>
+        <input type="text" ngModel #socketName>
+    </div>
+    <div>
+        <button (click)="onSocketSubmit()">Submit</button>
+    </div>
+    <div>
+        <p ngModel #socketResults></p>
+    </div>
+</div>
