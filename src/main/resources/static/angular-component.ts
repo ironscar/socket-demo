@@ -30,9 +30,9 @@ export class SocketDemoComponent implements OnInit, OnDestroy {
      * in spring boot, registry url should have same endpoint with and without sockJs
      * with is used when webSocketFactory is used and without is used if WebSocketFactory is commented out
      */
-    this.stompClient.webSocketFactory = () => {
-      return new SockJs('http://localhost:8080/up-guide-websocket');
-    };
+    // this.stompClient.webSocketFactory = () => {
+    //   return new SockJs('http://localhost:8080/up-guide-websocket');
+    // };
 
     this.stompClient.onConnect = (frame) => {
       console.log('connected: ', frame);

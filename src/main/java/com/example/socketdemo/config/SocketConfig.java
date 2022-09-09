@@ -18,7 +18,10 @@ public class SocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
+        // for actual websocket protocol
         registry.addEndpoint("/up-guide-websocket").setAllowedOrigins("http://localhost:4200");
+
+        // for sockjs protocol that tries to mock above
         registry.addEndpoint("/up-guide-websocket").setAllowedOrigins("http://localhost:4200").withSockJS();
     }
     
