@@ -24,5 +24,5 @@ public class SocketConfig implements WebSocketMessageBrokerConfigurer {
         // for sockjs protocol that tries to mock above
         registry.addEndpoint("/up-guide-websocket").setAllowedOrigins("http://localhost:4200").withSockJS();
     }
-    
+
 }

@@ -37,7 +37,7 @@ export class SocketDemoComponent implements OnInit, OnDestroy {
     this.stompClient.onConnect = (frame) => {
       console.log('connected: ', frame);
       this.stompClient.subscribe('/topic/greetings', (greeting) => {
-          const greetMsg = JSON.parse(greeting.body).content;
+          const greetMsg = JSON.parse(greeting.body).payload.content;
           this.result.nativeElement.innerText += ' ' + greetMsg;
       });
     };
